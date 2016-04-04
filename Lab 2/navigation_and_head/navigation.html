@@ -1,0 +1,45 @@
+<nav>
+  <ul>
+    <li><p class="navig">Вход</p>
+    	<ul>
+	    	<?
+	    		$eruser = 1;
+		    	while($rowus = $STHuser->fetch())
+				{
+					$surname = htmlspecialchars ($rowus["surname"]);
+					$id = htmlspecialchars ($rowus["id"]);
+					require "navigation_li.html";
+				}
+			?>
+      <?
+        if (isset($_SESSION["id"]))
+           require_once "nav_rec_yes_upd.html";
+      ?>
+      <li><a href="http://bd.lab/user/insert.php" class="navig">Добавить пользователя</a></li>
+			<li><a href="http://bd.lab/user/userunlog.php" class="navig">Выйти</a></li>
+		</ul>
+    </li>
+    <li><p class="navig">Мои рецепты</p>
+      	<ul>
+      		<?
+      			if (isset($_SESSION["id"]))
+      				require_once "nav_rec_yes.html";
+      			else
+      				require_once "nav_rec_no.html";
+      		?>
+      	</ul>
+    </li>
+    <li><p class="navig">Аптеки</p>
+    	<ul>
+        	<li><a href="" class="navig">Посмотреть</a></li>
+        	<li><a href="" class="navig">Добавить новую</a></li>
+      	</ul>
+    </li>
+    <li><a href="#" class="navig">Препараты</a>
+    	<ul>
+        	<li><a href="http://bd.lab" class="navig">Посмотреть</a></li>
+        	<li><a href="http://bd.lab/insert.php" class="navig">Добавить новый</a></li>
+      	</ul>
+    </li>
+  </ul>
+</nav>  

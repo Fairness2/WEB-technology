@@ -1,0 +1,22 @@
+				<input type="hidden" name="id" value="<?=$id?>">
+				<input type="hidden" name="key" value="<?=$key?>">
+				<label for="nameid">Название препарата*</label><br />
+				<input class="galaxyin" type="text" value="<?=$name?>" placeholder="Название препарата" name="newname" id="nameid" title="Сюда введите название" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1}[a-zA-Zа-яА-ЯЁё0-9\s]{0,49}" required><label for="nameid" class="laber"><?=$erorn?></label>
+				<br />
+				<label for="alias_1">Псевдоним №1</label><br />
+				<input class="galaxyin" type="text" value="<?=$alias_1?>" placeholder="Псевдоним №1" name="newalias_1" id="alias_1" title="Сюда введите первый псевдоним" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1}[a-zA-Zа-яА-ЯЁё0-9\s]{0,49}">
+				<br />
+				<label for="alias_2">Псевдоним №2</label><br />
+				<input class="galaxyin" type="text" value="<?=$alias_2?>" placeholder="Псевдоним №2" name="newalias_2" id="alias_2" title="Сюда введите второй псевдоним" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1}[a-zA-Zа-яА-ЯЁё0-9\s]{0,49}">
+				<br />
+				<label for="alias_3">Псевдоним №3</label><br />
+				<input class="galaxyin" type="text" value="<?=$alias_3?>" placeholder="Псевдоним №3" name="newalias_3" id="alias_3" title="Сюда введите третий псевдоним" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1}[a-zA-Zа-яА-ЯЁё0-9\s]{0,49}">
+				<br />
+				<label for="shelf">Срок годности*</label><br />
+				<input class="galaxyin" type="num" value="<?=$shelf_life?>" placeholder="Срок годности" name="newshelf" id="shelf" title="Сюда введите тип" pattern="[0-9]{1,3}" required><label for="typeid" class="laber"><?=$error_type?></label>
+				<br />
+				<label for="comp">Состав*</label><br />
+				<textarea placeholder="Состав"  name="newcomposition" id="comp" title="Сюда введите состав препарата" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1}[a-zA-Zа-яА-ЯЁё0-9\s]{0,254}" required><?=$composition?></textarea>
+				<br />
+				<label>Звёздочкой помечены обязательные поля</label>
+				<br />

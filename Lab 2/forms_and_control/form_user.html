@@ -1,0 +1,23 @@
+				<input type="hidden" name="key" value="<?=$key?>">
+				<label for="surameid">Фамилия*</label><br />
+				<input class="galaxyin" type="text" value="<?=$surname?>" placeholder="Фамилия" name="newsurname" id="surnameid" title="Сюда введите фамилию" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1,20}" required><label for="nameid" class="laber"><?=$erorn?></label>
+				<br />
+				<label for="yearsid">Полных лет</label><br />
+				<input class="galaxyin" type="text" value="<?=$years?>" placeholder="Полных лет" name="newyears" id="yearsid" title="Сюда введите число полных лет" pattern="[0-9]{1,3}">
+				<br />
+				<label for="basic_diagnosis">Базовый диагноз</label><br />
+				<input class="galaxyin" type="text" value="<?=$basic_diagnosis?>" placeholder="Базовый диагноз" name="newasic_diagnosis" id="basic_diagnosis" title="Сюда введите базовый диагноз" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1}[a-zA-Zа-яА-ЯЁё0-9\s]{0,49}">
+				<br />
+				<label for="concomitant_diagnosis">Вторичный диагноз</label><br />
+				<input class="galaxyin" type="text" value="<?=$concomitant_diagnosis?>" placeholder="Вторичный диагноз" name="newconcomitant_diagnosis" id="concomitant_diagnosis" title="Сюда введите третий псевдоним" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1}[a-zA-Zа-яА-ЯЁё0-9\s]{0,49}">
+				<br />
+				<label> Льготы</label><br />
+				<?
+					if ($privileges == 1) 
+						require_once $_SERVER['DOCUMENT_ROOT']."/forms_and_control/l_yes.html";
+					else
+						require_once $_SERVER['DOCUMENT_ROOT']."/forms_and_control/l_not.html";
+				?>
+				<br />
+				<label>Звёздочкой помечены обязательные поля</label>
+				<br />
