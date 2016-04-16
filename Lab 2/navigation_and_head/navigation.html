@@ -29,13 +29,23 @@
       		?>
       	</ul>
     </li>
+    <li><p class="navig">Мои покупки</p>
+      <ul>
+          <?
+            if (isset($_SESSION["id"]))
+             echo '<li><a href="http://bd.lab/user/purchase" class="navig">Посмотреть</a></li>';
+            else
+              require_once "nav_rec_no.html";
+          ?>
+        </ul>
+    </li>
     <li><p class="navig">Аптеки</p>
     	<ul>
-        	<li><a href="" class="navig">Посмотреть</a></li>
-        	<li><a href="" class="navig">Добавить новую</a></li>
+        	<li><a href="http://bd.lab/drugstore" class="navig">Посмотреть</a></li>
+        	<li><a href="http://bd.lab/drugstore/insert.php" class="navig">Добавить новую</a></li>
       	</ul>
     </li>
-    <li><a href="#" class="navig">Препараты</a>
+    <li><p class="navig">Препараты</p>
     	<ul>
         	<li><a href="http://bd.lab" class="navig">Посмотреть</a></li>
         	<li><a href="http://bd.lab/insert.php" class="navig">Добавить новый</a></li>

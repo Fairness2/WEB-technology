@@ -2,7 +2,7 @@
 	session_start();
 	require_once "/navigation_and_head/head.html";
 	require_once "/navigation_and_head/navigation.php";
-	require_once "/navigation_and_head/foot.html";
+	
 	if ($_SESSION["dname"] != "") 
 	{
 		$name = $_SESSION["dname"];
@@ -22,4 +22,5 @@
 	}
 	$key = $_SESSION["key"];
 	require_once "insert.html";
+	require_once "/navigation_and_head/foot.html";
 ?>
