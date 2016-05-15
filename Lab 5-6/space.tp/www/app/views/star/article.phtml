@@ -1,0 +1,20 @@
+<article class="midl">
+<h2><?=$name?></h2>
+<p>Вес звезды: <?=$weight?> масс Солнца</p>
+<p>Возраст звезды: <?=$age?> миллиардов лет</p>
+<p>Тип звезды: <?=$type?> </p>
+<p>Солнечная ситстема:<a href="http://space.tp/solarsystem/is?name=<?=$solar_system?>"><?=$solar_system?></a></p>
+
+
+<?php echo $this->tag->form("star/upd"); ?>
+<input type="hidden" name="id" value="<?=$id?>">
+<input class="galaxybutton" name="upd" type="submit" value="Изменить">
+</form>
+
+<?php echo $this->tag->form("star/delete"); ?>
+<input type="hidden" name="name" value="<?=$name?>">
+<input class="galaxybutton" name="del" type="submit" value="Удалить">
+</form>
+
+
+</article>

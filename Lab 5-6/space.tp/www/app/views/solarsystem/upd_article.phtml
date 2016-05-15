@@ -1,0 +1,27 @@
+<article class="midl">
+<h2>Изменение: <?=$name?></h2>
+
+<?php echo $this->tag->form("solarSystem/updater"); ?>
+<? include "form.phtml";?>
+<input type="hidden" name="id" value="<?=$id?>">
+<input class="galaxybutton" onmousedown="search()" name="upd" type="button" value="Изменить">
+</form>
+<p class="results"></p>
+
+</article>
+
+<script>
+function search() {
+	 			var name = document.getElementsByTagName('input')[0].value;
+                var galaxy = document.getElementsByTagName('select')[0].value;
+                var id = document.getElementsByTagName('input')[1].value;
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://space.tp/solarsystem/updater',
+                    data: 'name=' + name + '&id=' + id + '&galaxy=' + galaxy,
+                    success: function(data) {
+                        $('.results').html(data);
+                    }
+                });
+            }
+</script>

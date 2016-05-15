@@ -1,0 +1,12 @@
+<?
+	if (isset($solar_system))
+	{
+		$id = $solar_system->id;
+		$name = $solar_system->name;
+		$galaxy = $black_hole->galaxy->name;
+		include "upd_article.phtml";
+	}
+	else
+		echo '<article class="midl"><h2>Что-то пошло не так</h2></article>';
+?>
+

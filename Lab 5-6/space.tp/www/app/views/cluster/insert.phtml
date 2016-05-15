@@ -1,0 +1,26 @@
+<article class="midl">
+<h2>Добавление нового скопления</h2>
+
+<?php echo $this->tag->form("cluster/enter"); ?>
+<? include "form.phtml";?>
+<input class="galaxybutton" onmousedown="search()" name="upd" type="button" value="Добавить">
+</form>
+<p class="results"></p>
+
+</article>
+
+<script>
+function search() {
+	 			var name = document.getElementsByTagName('input')[0].value;
+                var kol = document.getElementsByTagName('input')[1].value;
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://space.tp/cluster/enter',
+                    data: 'name=' + name + '&kol=' + kol,
+                    success: function(data) {
+                        $('.results').html(data);
+                    }
+                });
+            }
+</script>
+

@@ -1,0 +1,35 @@
+<label for="name">Название галактики</label><br />
+<input class="galaxyin" type="text" value="<?=$name?>" placeholder="Название галактики" name="name" id="name" title="Сюда введите название" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1}[a-zA-Zа-яА-ЯЁё0-9\s]{0,99}" required><br />
+
+<label for="size">Размер галактики</label><br />
+<input class="galaxyin" type="num" value="<?=$size?>" placeholder="Размер галактики" name="size" id="kol" title="Сюда введите размер" pattern="[0-9]{1,9}" required><label for="size">Световых лет</label><br />
+
+<label>Выберите скопление</label><br />
+<select name="cluster" class="galaxyin">
+	<option disabled="disabled">Выберете скопление</option>
+	<?
+		foreach ($clusters as $cluster_s) {
+			$cluster_name = $cluster_s->name;
+			if ($cluster_name == $cluster) 
+				include "select_cluster.phtml";
+			else
+				echo "<option>$cluster_name</option>";
+		}
+	?>
+</select>
+<br />
+
+<label>Выберите тип галактики</label><br />
+<select name="type" class="galaxyin">
+	<option disabled="disabled">Выберете тип</option>
+	<?
+		foreach ($types as $type_s) {
+			$type_name = $type_s->name;
+			if ($type_name == $type) 
+				include "select_type.phtml";
+			else
+				echo "<option>$type_name</option>";
+		}
+	?>
+</select>
+<br />

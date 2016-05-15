@@ -1,0 +1,21 @@
+<?
+	if (isset($black_holes))
+	{
+		foreach ($black_holes->items as $black_hole) {
+			$id = $black_hole->id;
+			$name = $black_hole->name;
+			$weight = $black_hole->weight;
+			$age = $black_hole->age;
+			$galaxy = $black_hole->galaxy->name;
+			$type = $black_hole->typeOfBlackHole->name;
+
+			include "article.phtml";
+		}
+		echo "<footer>";
+		for ($i=1; $i <= $black_holes->total_pages; $i++) 
+			include "foot.phtml";
+		echo "</footer>";
+	}
+	else
+		echo '<article class="midl"><h2>СЧёрных дыр нет</h2></article>';
+?>

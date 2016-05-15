@@ -1,0 +1,17 @@
+<article class="midl">
+<h2><a href="http://space.tp/cluster/is?name=<?=$name?>"><?=$name?></a></h2>
+<p>Размер скопления: <?=$size?> галактик/a</p>
+
+
+<?php echo $this->tag->form("cluster/upd"); ?>
+<input type="hidden" name="id" value="<?=$id?>">
+<input class="galaxybutton" name="upd" type="submit" value="Изменить">
+</form>
+
+<?php echo $this->tag->form("cluster/delete"); ?>
+<input type="hidden" name="name" value="<?=$name?>">
+<input class="galaxybutton" name="del" type="submit" value="Удалить">
+</form>
+
+
+</article>

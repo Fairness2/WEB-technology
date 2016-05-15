@@ -1,0 +1,19 @@
+<article class="midl">
+<h2><a href="http://space.tp/galaxy/is?name=<?=$name?>"><?=$name?></a></h2>
+<p>Размер галактики: <?=$size?> световых лет</p>
+<p>Тип галактики: <?=$type?> </p>
+<p>Скопление:<a href="http://space.tp/cluster/is?name=<?=$cluster?>"><?=$cluster?></a></p>
+
+
+<?php echo $this->tag->form("galaxy/upd"); ?>
+<input type="hidden" name="id" value="<?=$id?>">
+<input class="galaxybutton" name="upd" type="submit" value="Изменить">
+</form>
+
+<?php echo $this->tag->form("galaxy/delete"); ?>
+<input type="hidden" name="name" value="<?=$name?>">
+<input class="galaxybutton" name="del" type="submit" value="Удалить">
+</form>
+
+
+</article>

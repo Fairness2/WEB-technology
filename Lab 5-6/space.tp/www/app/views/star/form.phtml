@@ -1,0 +1,38 @@
+<label for="name">Название Звезды</label><br />
+<input class="galaxyin" type="text" value="<?=$name?>" placeholder="Название звезды" name="name" id="name" title="Сюда введите название" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1}[a-zA-Zа-яА-ЯЁё0-9\s]{0,99}" required><br />
+
+<label for="weight">Вес звезды</label><br />
+<input class="galaxyin" type="num" value="<?=$weight?>" placeholder="Вес звезды" name="weight" id="weight" title="Сюда введите вес" pattern="[0-9]{1,9}" required><label for="weight">Масс Солнца</label><br />
+
+<label for="age">Возраст звезды</label><br />
+<input class="galaxyin" type="num" value="<?=$age?>" placeholder="Возраст звезды" name="age" id="age" title="Сюда введите возраст" pattern="[0-9]{1,9}" required><label for="age"></label><br />
+
+<label>Выберите звёздную систему</label><br />
+<select name="galaxy" class="galaxyin">
+	<option disabled="disabled">Выберете звёздную систему</option>
+	<?
+		foreach ($solar_systems as $solar_system_s) {
+			$solar_system_name = $solar_system_s->name;
+			if ($solar_system_name == $solar_system) 
+				include "select_solar_system.phtml";
+			else
+				echo "<option>$solar_system_name</option>";
+		}
+	?>
+</select>
+<br />
+
+<label>Выберите тип звезды</label><br />
+<select name="type" class="galaxyin">
+	<option disabled="disabled">Выберете тип</option>
+	<?
+		foreach ($types as $type_s) {
+			$type_name = $type_s->name;
+			if ($type_name == $type) 
+				include "select_type.phtml";
+			else
+				echo "<option>$type_name</option>";
+		}
+	?>
+</select>
+<br />

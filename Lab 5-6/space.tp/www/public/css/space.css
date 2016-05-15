@@ -1,0 +1,294 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: url('http://space.tp/img/outer-space-milky-way.jpg') #000000 no-repeat;
+	background-attachment: fixed;
+	background-size: 100%; /* Современные браузеры */
+
+}
+
+header {
+	background-color: rgba(222, 226, 237, 0.9);
+	width: calc(100% - 2em);
+	height: 5em;
+	color: #000000;
+	padding: 1em;
+	float: left;
+	margin-bottom: 0em;
+}
+
+
+#headp {
+	font-family: fantasy, sans-serif;
+	font-size: 5em;
+	text-align: center;
+	margin: auto;
+	
+}
+
+#heada {
+	text-decoration: none;
+	color: #1E8FF1;
+}
+
+nav{
+  float: left;
+  /*top: 7.7em;*/
+  width: 100%;
+  background: #1E8FF1;
+  z-index: 2;
+  margin-bottom: 2em;
+}
+
+nav ul {
+    list-style: none;
+    position: relative;
+    float: left;
+    margin-right: 10%;
+    display: inline-table;
+}
+nav ul li{
+      float: left;
+      /*-webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;*/
+      transition: all .2s ease-in-out;
+    }
+
+nav ul li:hover{background: rgba(0,0,0,.15);}
+nav ul li:hover > ul{display: block;}
+nav ul li{
+    float: left;
+    /*-webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;*/
+    transition: all .2s ease-in-out;
+}
+nav ul li .navig{
+    display: block; 
+    padding: 30px 20px;
+    font-size: .9em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav ul ul{
+  display: none;
+  background: #1E8FF1;
+  position: absolute; 
+  top: 100%;
+}
+nav ul ul li{float: none; position: relative;}
+nav ul ul li .navig {
+  padding: 15px 30px; 
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+nav ul ul ul {
+  position: absolute; 
+  left: 100%; 
+  top:0;
+}
+
+.navig {
+	color: #FFFFFF;
+}	
+
+footer {
+	text-align: center;
+	width: 100%;
+	height: 1.5em;
+	background-color: #FFFFFF;
+	color: #000000;
+	padding: 0.5em;
+	float: left;
+	overflow: auto;
+}
+
+footer a {
+	margin-right: 0.15em;
+}
+
+.foota {
+	color: #000000;
+}
+
+.foota:visited {
+	color: #1E8FF1;
+}
+#footp {
+	font-family: fantasy, sans-serif;
+	font-size: 0.7em;
+	text-align: right;
+}
+
+.midl, aside{
+	background-color: #FFFFFF;
+	padding: 0.5em;
+	float: left; 	
+}
+
+.midl {
+	width: 100%;
+	border-bottom: 0.25em solid #1E8FF1;
+}
+
+aside {
+	width: 24%;
+	position: absolute;
+	top: 13.5em;
+	left: 74%;
+}
+
+.asidep {
+	font-family: fantasy, sans-serif;
+	text-align: left;
+	color: #000000;
+}
+
+.asidea {
+	text-decoration: underline;
+	color: #000000;
+}
+
+aside ul {
+	list-style-position: inside;
+	list-style-type: circle;
+}
+
+article h2 {
+	text-align: center;
+	color: #1E8FF1;
+	font-family: arial black, sans-serif;	
+}
+
+article h2 a {
+	text-decoration: none;
+	color: #1E8FF1;
+}
+
+article p, label {
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	text-align: justify;
+	text-indent: 1em;
+}
+
+article img {
+	border: 0.1em solid #8F0000;
+	width: 60%;	
+	margin-left: 20%;
+}
+
+div {
+	background-color: #FFFFFF;
+	width: 80%;
+	margin-left: 10%;
+	float: left;
+}
+
+.upd {
+	color: #000DB8;
+}
+
+.galaxybutton {
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	padding: 0.5em;
+	text-align: center;
+	margin-left: 1em;
+	margin-bottom: 0.25em;
+	margin-top: 0.25em;
+	color: #FFFFFF;
+	min-width: 6em;
+	min-height: 2em;	
+	background-color: #1E8FF1;
+	border: 0.25em solid #1E8FF1;
+	transition-duration: 0.4s;
+}
+
+.galaxybutton:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.galaxyin {
+	font-size: 1em;
+	font-family: arial, sans-serif;
+	text-align: left;
+	margin-left: 1em;
+	color: #000000;	
+	background-color: #FFFFFF;
+	min-width: 7em;
+	min-height: 1.5em;
+	border: 0.02em solid #000000;
+	transition-duration: 0.1s;
+	margin-bottom: 0.5em;
+}
+
+.galaxyin:focus {
+	border: 0.25em solid #1E8FF1;
+}
+
+label {	
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	text-align: justify;
+	text-indent: 1em;
+	margin-left: 1em;
+}
+
+.laber {
+	color: #F50505;
+}
+
+.user {
+	position: absolute;
+	top: 1em;
+	width: 100%;
+}
+
+.user p {
+	margin-right: 1em;
+	font-family: segoe print, sans-serif;
+	font-size: 1em;
+	text-align: right;
+	color: #071888;
+}
+
+.nav_div {
+	overflow: auto;
+	padding: 1em;
+	margin: auto;
+}
+
+table {
+	border: 0.1em solid #1E8FF1;
+	background-color: #1E8FF1;	
+	border-radius: 1em;
+	padding: 1em;
+	margin: auto;
+}
+
+.table_header, .table_body {
+	text-align: center;
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	text-align: justify;
+	padding: 0.5em;
+}
+
+.table_header {
+	background-color: #1E8FF1;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.table_body {
+	background-color: #FFFFFF;
+	text-align: center;
+}
+
+.results {
+	font-size: 1.5em;
+	color: red;
+}

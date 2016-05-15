@@ -1,0 +1,22 @@
+<article class="midl">
+<h2>Солнечные системы и чёрные дыры в <?=$galaxy_name?></h2>
+
+<?
+	if (count($black_holes) != 0) 
+	{
+		echo "<h2>Чёрные дыры</h2>";
+		include "is_table_bh.phtml";
+	}
+	else
+		echo "<p>В этой галактике нет чёрных дыр</p>";
+	if (count($solar_systems) != 0) 
+	{
+		echo "<h2>галактики</h2>";
+		include "is_table_ss.phtml";
+	}
+	else
+		echo "<p>В этой галактике нет звёздных систем</p>";
+?>
+
+
+</article>

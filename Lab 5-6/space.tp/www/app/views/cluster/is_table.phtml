@@ -1,0 +1,15 @@
+<table>
+        <tr>
+            <td class="table_header">Название</td>
+            <td class="table_header">Рзмер<br>световые годы</td>
+            <td class="table_header">Тип</td>
+        </tr>
+        <?
+            foreach ($galaxis as $galaxy) {
+				$galaxy_name = $galaxy->name;
+				$galaxy_size = $galaxy->size;
+				$galaxy_type = $galaxy->typeOfGalaxy->name;
+				include "is_string.phtml";
+			}
+        ?>
+</table>

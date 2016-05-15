@@ -1,0 +1,26 @@
+<article class="midl">
+<h2>Добавление новой звёздной системы</h2>
+
+<?php echo $this->tag->form("solarSystem/enter"); ?>
+<? include "form.phtml";?>
+<input class="galaxybutton" onmousedown="search()" name="upd" type="button" value="Добавить">
+</form>
+<p class="results"></p>
+
+</article>
+
+<script>
+function search() {
+                var name = document.getElementsByTagName('input')[0].value;
+                var galaxy = document.getElementsByTagName('select')[0].value;
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://space.tp/solarsystem/enter',
+                    data: 'name=' + name + '&galaxy=' + galaxy,
+                    success: function(data) {
+                        $('.results').html(data);
+                    }
+                });
+            }
+</script>
+

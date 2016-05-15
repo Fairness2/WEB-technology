@@ -1,0 +1,20 @@
+<?
+	if (isset($planets))
+	{
+		foreach ($planets->items as $planet) {
+			$id = $planet->id;
+			$name = $planet->name;
+			$weight = $planet->weight;
+			$solar_system = $planet->solarSystem->name;
+			$type = $planet->typeOfPlanet->name;
+
+			include "article.phtml";
+		}
+		echo "<footer>";
+		for ($i=1; $i <= $planets->total_pages; $i++) 
+			include "foot.phtml";
+		echo "</footer>";
+	}
+	else
+		echo '<article class="midl"><h2>Планет нет</h2></article>';
+?>

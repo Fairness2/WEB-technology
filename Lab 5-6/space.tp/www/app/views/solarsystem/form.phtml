@@ -1,0 +1,17 @@
+<label for="name">Название солнечной системы</label><br />
+<input class="galaxyin" type="text" value="<?=$name?>" placeholder="Название солнечной системы" name="name" id="name" title="Сюда введите название" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1}[a-zA-Zа-яА-ЯЁё0-9\s]{0,99}" required><br />
+
+<label>Выберите галактику</label><br />
+<select name="galaxy" class="galaxyin">
+	<option disabled="disabled">Выберете галактику</option>
+	<?
+		foreach ($galaxis as $galaxy_s) {
+			$galaxy_name = $galaxy_s->name;
+			if ($galaxy_name == $galaxy) 
+				include "select_galaxy.phtml";
+			else
+				echo "<option>$galaxy_name</option>";
+		}
+	?>
+</select>
+<br />

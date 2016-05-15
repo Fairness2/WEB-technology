@@ -1,0 +1,15 @@
+<table>
+        <tr>
+            <td class="table_header">Название</td>
+            <td class="table_header">Вес<br>Масс Земли</td>
+            <td class="table_header">Тип</td>
+        </tr>
+        <?
+            foreach ($planets as $planet) {
+				$planet_name = $planet->name;
+                $planet_weight = $planet->weight;
+				$planet_type = $planet->TypeOfPlanet->name;
+				include "is_string_pl.phtml";
+			}
+        ?>
+</table>

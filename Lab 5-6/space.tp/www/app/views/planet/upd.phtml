@@ -1,0 +1,14 @@
+<?
+	if (isset($planet))
+	{
+		$id = $planet->id;
+		$name = $planet->name;
+		$weight = $planet->weight;
+		$solar_system = $planet->solarSystem->name;
+		$type = $planet->typeOfPlanet->name;
+		include "upd_article.phtml";
+	}
+	else
+		echo '<article class="midl"><h2>Что-то пошло не так</h2></article>';
+?>
+

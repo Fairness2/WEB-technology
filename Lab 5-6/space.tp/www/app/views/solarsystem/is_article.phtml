@@ -1,0 +1,22 @@
+<article class="midl">
+<h2>Планеты и звёзды в <?=$ss_name?></h2>
+
+<?
+	if (count($stars) != 0) 
+	{
+		echo "<h2>Звёзды</h2>";
+		include "is_table_st.phtml";
+	}
+	else
+		echo "<p>В этой звёздной системе нет звёзд</p>";
+	if (count($planets) != 0) 
+	{
+		echo "<h2>Планеты</h2>";
+		include "is_table_pl.phtml";
+	}
+	else
+		echo "<p>В этой звёздной системе нет планет</p>";
+?>
+
+
+</article>

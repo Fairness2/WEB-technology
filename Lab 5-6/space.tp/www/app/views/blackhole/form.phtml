@@ -1,0 +1,38 @@
+<label for="name">Название чёрной дыры</label><br />
+<input class="galaxyin" type="text" value="<?=$name?>" placeholder="Название чёрной дыры" name="name" id="name" title="Сюда введите название" pattern="[a-zA-Zа-яА-ЯЁё0-9]{1}[a-zA-Zа-яА-ЯЁё0-9\s]{0,99}" required><br />
+
+<label for="weight">Вес чёрной дыры</label><br />
+<input class="galaxyin" type="num" value="<?=$weight?>" placeholder="Вес чёрной дыры" name="weight" id="weight" title="Сюда введите вес" pattern="[0-9]{1,9}" required><label for="weight">Масс Солнца</label><br />
+
+<label for="age">Возраст чёрной дыры</label><br />
+<input class="galaxyin" type="num" value="<?=$age?>" placeholder="Возраст чёрной дыры" name="age" id="age" title="Сюда введите возраст" pattern="[0-9]{1,9}" required><label for="age"></label><br />
+
+<label>Выберите галактику</label><br />
+<select name="galaxy" class="galaxyin">
+	<option disabled="disabled">Выберете галактику</option>
+	<?
+		foreach ($galaxis as $galaxy_s) {
+			$galaxy_name = $galaxy_s->name;
+			if ($galaxy_name == $galaxy) 
+				include "select_galaxy.phtml";
+			else
+				echo "<option>$galaxy_name</option>";
+		}
+	?>
+</select>
+<br />
+
+<label>Выберите тип галактики</label><br />
+<select name="type" class="galaxyin">
+	<option disabled="disabled">Выберете тип</option>
+	<?
+		foreach ($types as $type_s) {
+			$type_name = $type_s->name;
+			if ($type_name == $type) 
+				include "select_type.phtml";
+			else
+				echo "<option>$type_name</option>";
+		}
+	?>
+</select>
+<br />

@@ -1,0 +1,13 @@
+<?
+	if (isset($types))
+	{
+		foreach ($types as $type) {
+			$name = $type->name;
+			$description = $type->description;
+
+			include "article_type.phtml";
+		}
+	}
+	else
+		echo '<article class="midl"><h2>Типов галактик не обнаружено</h2></article>';
+?>

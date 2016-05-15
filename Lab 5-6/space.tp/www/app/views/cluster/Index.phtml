@@ -1,0 +1,17 @@
+<?
+	if (isset($clusters))
+	{
+		foreach ($clusters->items as $cluster) {
+			$id = $cluster->id;
+			$name = $cluster->name;
+			$size = $cluster->size;
+			include "article.phtml";
+		}
+		echo "<footer>";
+		for ($i=1; $i <= $clusters->total_pages; $i++) 
+			include "foot.phtml";
+		echo "</footer>";
+	}
+	else
+		echo '<article class="midl"><h2>Скоплений галактик нет</h2></article>';
+?>

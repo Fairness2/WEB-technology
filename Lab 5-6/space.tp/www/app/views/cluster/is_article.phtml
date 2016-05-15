@@ -1,0 +1,14 @@
+<article class="midl">
+<h2>Галактики в <?=$cluster_name?></h2>
+
+<?
+	if (count($galaxis) != 0) 
+	{
+		include "is_table.phtml";
+	}
+	else
+		echo "<p>В этом скоплении нет галактик</p>";
+?>
+
+
+</article>

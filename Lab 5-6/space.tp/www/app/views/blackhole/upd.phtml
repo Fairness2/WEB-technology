@@ -1,0 +1,15 @@
+<?
+	if (isset($black_hole))
+	{
+		$id = $black_hole->id;
+		$name = $black_hole->name;
+		$weight = $black_hole->weight;
+		$age = $black_hole->age;
+		$galaxy = $black_hole->galaxy->name;
+		$type = $black_hole->typeOfBlackHole->name;
+		include "upd_article.phtml";
+	}
+	else
+		echo '<article class="midl"><h2>Что-то пошло не так</h2></article>';
+?>
+

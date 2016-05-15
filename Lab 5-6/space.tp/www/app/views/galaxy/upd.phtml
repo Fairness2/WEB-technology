@@ -1,0 +1,14 @@
+<?
+	if (isset($galaxy))
+	{
+		$id = $galaxy->id;
+		$name = $galaxy->name;
+		$size = $galaxy->size;
+		$type = $galaxy->typeOfGalaxy->name;
+		$cluster = $galaxy->cluster->name;
+		include "upd_article.phtml";
+	}
+	else
+		echo '<article class="midl"><h2>Что-то пошло не так</h2></article>';
+?>
+

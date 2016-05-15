@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Space</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!--описание контента-->
+		<link rel="stylesheet" type="text/css" href="http://space.tp/css/space.css" />
+		<link rel="stylesheet" type="text/css" href="http://space.tp/css/Animation.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	</head>
+	<body>		
+		<header>
+			<p id="headp">
+				<a href="http://space.tp" id="heada" title="Главная">НЕМНОГО О КОСМОСЕ</a>
+			</p>
+		</header>
+		<nav>
+		  <ul>
+		    <li><p class="navig">Скопления галактик</p>
+		    	<ul>
+		     		<li><a href="http://space.tp/cluster" class="navig">Посмотреть</a></li>		
+		     		<li><a href="http://space.tp/cluster/insert" class="navig">Добавить</a></li>	
+				</ul>
+		    </li>
+		    <li><p class="navig">Галактики</p>
+		      	<ul>
+		      		<li><a href="http://space.tp/galaxy" class="navig">Посмотреть галактики</a></li>		
+		     		<li><a href="http://space.tp/galaxy/insert" class="navig">Добавить галактику</a></li>	
+		     		<li><a href="http://space.tp/galaxy/type" class="navig">Посмотреть типы галактик</a></li>	
+		      	</ul>
+		    </li>
+		    <li><p class="navig">Чёрные дыры</p>
+		      <ul>
+		      		<li><a href="http://space.tp/blackhole" class="navig">Посмотреть</a></li>		
+		     		<li><a href="http://space.tp/blackhole/insert" class="navig">Добавить</a></li>	
+		     		<li><a href="http://space.tp/blackhole/type" class="navig">Посмотреть типы чёрных дыр</a></li>	
+		        </ul>
+		    </li>
+		    <li><p class="navig">Звёздные системы</p>
+		    	<ul>
+		        	<li><a href="http://space.tp/solarsystem" class="navig">Посмотреть</a></li>		
+		     		<li><a href="http://space.tp/solarsystem/insert" class="navig">Добавить</a></li>
+		      	</ul>
+		    </li>
+		    <li><p class="navig">Звёзды</p>
+		    	<ul>
+		        	<li><a href="http://space.tp/star" class="navig">Посмотреть</a></li>		
+		     		<li><a href="http://space.tp/star/insert" class="navig">Добавить</a></li>
+		     		<li><a href="http://space.tp/star/type" class="navig">Посмотреть типы звёзд</a></li>		        	
+		      	</ul>
+		    </li>
+		    <li><p class="navig">Планеты</p>
+		    	<ul>
+		        	<li><a href="http://space.tp/planet" class="navig">Посмотреть</a></li>		
+		     		<li><a href="http://space.tp/planet/insert" class="navig">Добавить</a></li>	
+		     		<li><a href="http://space.tp/planet/type" class="navig">Посмотреть типы планет</a></li>	        	
+		      	</ul>
+		    </li>
+		  </ul>
+		</nav>  
+
+		<div>
+			<? echo $this->getContent() ?>
+		</div>
+		
+
+
+	</body>
+</html>

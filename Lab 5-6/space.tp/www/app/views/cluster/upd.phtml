@@ -1,0 +1,12 @@
+<?
+	if (isset($cluster))
+	{
+		$id = $cluster->id;
+		$name = $cluster->name;
+		$size = $cluster->size;
+		include "upd_article.phtml";
+	}
+	else
+		echo '<article class="midl"><h2>Что-то пошло не так</h2></article>';
+?>
+

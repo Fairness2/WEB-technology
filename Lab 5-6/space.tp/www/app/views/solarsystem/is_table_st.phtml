@@ -1,0 +1,17 @@
+<table>
+        <tr>
+            <td class="table_header">Название</td>
+            <td class="table_header">Вес<br>Масс Солнца</td>
+            <td class="table_header">Возраст<br>Миллиардов лет</td>
+            <td class="table_header">Тип</td>
+        </tr>
+        <?
+            foreach ($stars as $star) {
+				$star_name = $star->name;
+                $star_weight = $star->weight;
+				$star_age = $star->age;
+				$star_type = $star->TypeOfStar->name;
+				include "is_string_st.phtml";
+			}
+        ?>
+</table>

@@ -1,0 +1,17 @@
+<table>
+        <tr>
+            <td class="table_header">Название</td>
+            <td class="table_header">Вес<br>Масс Солнца</td>
+            <td class="table_header">Возраст<br>Миллиардов лет</td>
+            <td class="table_header">Тип</td>
+        </tr>
+        <?
+            foreach ($black_holes as $black_hole) {
+				$black_hole_name = $black_hole->name;
+                $black_hole_weight = $black_hole->weight;
+				$black_hole_age = $black_hole->age;
+				$black_hole_type = $black_hole->TypeOfBlackHole->name;
+				include "is_string_bh.phtml";
+			}
+        ?>
+</table>
